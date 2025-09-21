@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #87ceeb, #f0f8ff);
+  color: #333;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.container {
+  width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin-top: 30px;
+}
+
+h1, h2 {
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.calculator {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.display {
+  width: 100%;
+  padding: 12px;
+  font-size: 2rem;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  margin-bottom: 15px;
+  text-align: right;
+  background: #fff;
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  padding: 18px 0;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  user-select: none;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.clear {
+  background: #dc3545;
+}
+
+.clear:hover {
+  background: #a71d2a;
+}
+
+.equals {
+  grid-row: span 2;
+  background: #28a745;
+}
+
+.equals:hover {
+  background: #19692c;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.history-section {
+  margin-top: 30px;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #e9ecef;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+}
+
+#history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#history-list li {
+  padding: 6px;
+  border-bottom: 1px solid #ccc;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+#history-list li:last-child {
+  border-bottom: none;
+}
+
+.clear-history-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.clear-history-btn:hover {
+  background: #a71d2a;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+  .btn {
+    padding: 14px 0;
+    font-size: 1rem;
+  }
+  .display {
+    font-size: 1.5rem;
+  }
+}
